@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=x+w@zti=%&$b4=d$3n0=5avx0*skc-xzoj9aacnf93jx&08ch
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-52-79-155-61.ap-northeast-2.compute.amazonaws.com']
 
 
 # Application definition
@@ -79,11 +79,19 @@ WSGI_APPLICATION = 'pj1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'project1',
+        'USER': 'admin',
+        'PASSWORD': 'project1pw',
+        'HOST':'database-1.cdh0dkwnxjx1.ap-northeast-2.rds.amazonaws.com',
+        'PORT':'3306',
+        'OPTIONS':{
+            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     }
 }
-
+# 데이터베이스 이름 : project1
+# PW : project1pw
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
