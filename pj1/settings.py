@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'pj1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'project1',
-        'USER': 'admin',
-        'PASSWORD': 'project1pw',
-        'HOST':'database-1.cdh0dkwnxjx1.ap-northeast-2.rds.amazonaws.com',
+        'NAME': 'TIDB',
+        'USER': 'soldesk',
+        'PASSWORD': 'qwe123',
+        'HOST':'13.125.255.21',
         'PORT':'3306',
         'OPTIONS':{
             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
